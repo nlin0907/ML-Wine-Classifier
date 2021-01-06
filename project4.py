@@ -14,7 +14,7 @@ def euclidean_distance(a,b):
     return np.sqrt(np.dot(diff, diff))
 
 def load_data(csv_filename):
-    data = np.genfromtxt(csv_filename, delimiter=';', skip_header=1, usecols=(0,1,2,3,4,5,6,7,8,9,10,11))
+    data = np.genfromtxt(csv_filename, delimiter=';', skip_header=1, usecols=(0,1,2,3,4,5,6,7,8,9,10))
     return data
 
 
@@ -87,8 +87,8 @@ def cross_validation(ww_data, rw_data, k):
     
 if __name__ == "__main__":
     
-    ww_data = load_data('/Users/nicolelin/Downloads/whitewine.csv')
-    rw_data = load_data('/Users/nicolelin/Downloads/redwine.csv')
+    ww_data = load_data('whitewine.csv')
+    rw_data = load_data('redwine.csv')
 
     #Uncomment the following lines for step 2: 
     ww_train, ww_test = split_data(ww_data, 0.9)
